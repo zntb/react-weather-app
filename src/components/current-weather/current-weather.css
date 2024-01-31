@@ -60,6 +60,7 @@
 }
 
 .parameter-value {
+  margin-right: 5px;
   text-align: right;
   font-weight: 600;
   font-size: 12px;
