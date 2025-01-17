@@ -7,7 +7,7 @@ import { WEATHER_API_URL, WEATHER_API_KEY } from './api';
 import Forecast from './components/forecast/Forecast';
 
 function App() {
-  const [currentWeather, setCurrrentWeather] = useState(null);
+  const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
   const handleOnSearchChange = (searchData) => {
@@ -25,7 +25,7 @@ function App() {
         const weatherResponse = await response[0].json();
         const forecastResponse = await response[1].json();
 
-        setCurrrentWeather({ city: searchData.label, ...weatherResponse });
+        setCurrentWeather({ city: searchData.label, ...weatherResponse });
         setForecast({ city: searchData.label, ...forecastResponse });
       })
       .catch((err) => {
